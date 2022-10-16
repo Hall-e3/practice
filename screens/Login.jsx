@@ -94,7 +94,7 @@ export default function Login({ navigation }) {
             width: width / 1.1,
           }}
         >
-          <TouchableOpacity onPress={() => console.log("it's pressed")}>
+          <TouchableOpacity onPress={() => navigation.navigate("app")}>
             <Text>Login</Text>
           </TouchableOpacity>
         </View>
