@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
+    <View>
       <Text>Home</Text>
     </View>
   );
