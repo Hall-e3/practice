@@ -1,12 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import BottomStack from "./BottomStack";
+const Drawer = createDrawerNavigator();
 
 export default function DrawerStack() {
   return (
-    <View>
-      <Text>DrawerStack</Text>
-    </View>
-  )
+    <Drawer.Navigator screenOptions={{ headerShown: false }}>
+      <Drawer.Screen name="tabs" component={BottomStack} />
+    </Drawer.Navigator>
+  );
 }
-
-const styles = StyleSheet.create({})
