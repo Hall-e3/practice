@@ -109,7 +109,7 @@ export default function Register({ navigation }) {
             onPress={toggleSecureTextEntry}
           />
 
-          <View
+          <TouchableOpacity
             style={{
               backgroundColor: "#D79922",
               paddingVertical: 20,
@@ -121,11 +121,11 @@ export default function Register({ navigation }) {
               marginTop: 20,
               width: width / 1.1,
             }}
+            onPress={() => console.log("it's pressed")}
+            activeOpacity={1}
           >
-            <TouchableOpacity onPress={() => console.log("it's pressed")}>
-              <Text>Register</Text>
-            </TouchableOpacity>
-          </View>
+            <Text>Register</Text>
+          </TouchableOpacity>
 
           <View
             style={{

@@ -81,7 +81,8 @@ export default function Login({ navigation }) {
           onPress={toggleSecureTextEntry}
         />
 
-        <View
+        <TouchableOpacity
+          activeOpacity={1}
           style={{
             backgroundColor: "#D79922",
             paddingVertical: 20,
@@ -93,11 +94,10 @@ export default function Login({ navigation }) {
             marginTop: 20,
             width: width / 1.1,
           }}
+          onPress={() => navigation.navigate("app")}
         >
-          <TouchableOpacity onPress={() => navigation.navigate("app")}>
-            <Text>Login</Text>
-          </TouchableOpacity>
-        </View>
+          <Text>Login</Text>
+        </TouchableOpacity>
 
         <View
           style={{ flexDirection: "row", marginHorizontal: 20, marginTop: 15 }}
