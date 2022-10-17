@@ -26,6 +26,8 @@ export default function BottomStack() {
         tabBarActiveTintColor: "#e91e",
         tabBarInactiveTintColor: "gray",
         tabBarLabelStyle: { paddingBottom: 10, fontSize: 10 },
+        headerShown: false,
+        tabBarStyle: { padding: 10, height: 70,backgroundColor:"#314456" },
       })}
     >
       <Tab.Screen name="home" component={Home} />
