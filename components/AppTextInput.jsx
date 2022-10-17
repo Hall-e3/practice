@@ -1,4 +1,4 @@
-import { Feather } from "@expo/vector-icons";
+
 import React from "react";
 import {
   StyleSheet,
@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
+import { Feather } from "@expo/vector-icons";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 const { width } = Dimensions.get("screen");
 export default function AppTextInput(props) {
