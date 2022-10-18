@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   StyleSheet,
@@ -19,7 +18,9 @@ export default function AppTextInput(props) {
         marginHorizontal: 20,
       }}
     >
-      <Text style={{ marginBottom: 8 }}>{props.label}</Text>
+      <Text style={[styles.text, { color: "#111", marginBottom: 8 }]}>
+        {props.label}
+      </Text>
       <View
         style={{
           borderColor: "gray",
@@ -46,12 +47,15 @@ export default function AppTextInput(props) {
         )}
         <TextInput
           placeholder={props.placeholder}
-          style={{
-            marginLeft: 10,
-            marginRight: 16,
-            flex: 1,
-            width: width / 1.1,
-          }}
+          style={[
+            styles.text,
+            {
+              marginLeft: 10,
+              marginRight: 16,
+              flex: 1,
+              width: width / 1.1,
+            },
+          ]}
           secureTextEntry={props.secureTextEntry || false}
           value={props.value}
           autoCapitalize="none"
@@ -79,4 +83,6 @@ export default function AppTextInput(props) {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  text: { fontSize: 16, fontFamily: "Poppins-Black" },
+});

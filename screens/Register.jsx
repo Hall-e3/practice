@@ -64,23 +64,11 @@ export default function Register({ navigation }) {
             source={logo}
             style={{ width: 80, height: 80, marginVertical: 6 }}
           />
-          <Text>Sign up to connect</Text>
+          <Text style={[styles.text, { color: "#111" }]}>
+            Sign up to connect
+          </Text>
         </View>
         <View>
-          {/* <AppTextInput
-            label="First Name"
-            placeholder="enter first name"
-            leftIcon="user-o"
-            size={20}
-            onChangeText={(text) => textInputChange(text)}
-          />
-          <AppTextInput
-            label="Last Name"
-            placeholder="enter last name"
-            leftIcon="user-o"
-            size={20}
-            onChangeText={(text) => textInputChange(text)}
-          /> */}
           <AppTextInput
             label="Email"
             placeholder="enter email"
@@ -124,7 +112,7 @@ export default function Register({ navigation }) {
             onPress={() => console.log("it's pressed")}
             activeOpacity={1}
           >
-            <Text>Register</Text>
+            <Text style={[styles.text, { color: "#111" }]}>Register</Text>
           </TouchableOpacity>
 
           <View
@@ -134,9 +122,13 @@ export default function Register({ navigation }) {
               marginTop: 15,
             }}
           >
-            <Text>Already have an account? </Text>
+            <Text style={[styles.text, { color: "#111" }]}>
+              Already have an account?{" "}
+            </Text>
             <TouchableOpacity onPress={() => navigation.navigate("login")}>
-              <Text style={{ marginLeft: 4, color: "#6495ed" }}>Login</Text>
+              <Text style={[styles.text, { marginLeft: 4, color: "#6495ed" }]}>
+                Login
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -152,4 +144,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#EFE2BA",
   },
+  text: { color: "#fff", fontSize: 16, fontFamily: "Poppins-Black" },
 });

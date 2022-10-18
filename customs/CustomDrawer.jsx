@@ -38,10 +38,23 @@ export default function CustomDrawer(props) {
           style={{
             flexDirection: "row",
             alignContent: "center",
+            marginVertical: 10,
+          }}
+        >
+          <FontAwesome name="share-alt" size={22} color="#e91e" />
+          <Text style={[styles.text, { color: "#333", marginLeft: 12 }]}>
+            Tell a friend
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            flexDirection: "row",
+            alignContent: "center",
+            marginVertical: 10,
           }}
         >
           <FontAwesome name="sign-out" size={22} color="#e91e" />
-          <Text style={[styles.text, { color: "#111", marginLeft: 8 }]}>
+          <Text style={[styles.text, { color: "#333", marginLeft: 12 }]}>
             Sign Out
           </Text>
         </TouchableOpacity>

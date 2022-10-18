@@ -34,7 +34,7 @@ export default function DrawerStack() {
         drawerLabelStyle: {
           fontSize: 16,
           fontFamily: "Poppins-Black",
-          marginLeft: -20,
+          marginLeft: -18,
           alignItems: "center",
         },
         drawerActiveTintColor: "#e91e",
