@@ -3,6 +3,7 @@ import { Profile, Settings, Home } from "../screens";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { Feather } from "@expo/vector-icons";
+import { StyleSheet } from "react-native";
 const Tab = createBottomTabNavigator();
 //activeColor="#e91e"
 export default function BottomStack() {
@@ -14,25 +15,33 @@ export default function BottomStack() {
           let iconName;
           let routeName = route.name;
 
-          if (routeName === "home") {
+          if (routeName === "Home") {
             iconName = focused ? "home" : "home";
           } else if (routeName === "Search") {
             iconName = focused ? "search" : "search";
-          } else if (routeName === "settings") {
+          } else if (routeName === "Settings") {
             iconName = focused ? "cog" : "cog";
           }
           return <FontAwesome name={iconName} size={size} color={color} />;
         },
         tabBarActiveTintColor: "#e91e",
         tabBarInactiveTintColor: "gray",
-        tabBarLabelStyle: { paddingBottom: 10, fontSize: 10 },
+        tabBarLabelStyle: {
+          paddingBottom: 10,
+          fontSize: 16,
+          fontFamily: "Poppins-Black",
+        },
         headerShown: false,
-        tabBarStyle: { padding: 10, height: 70, backgroundColor: "#314456" },
+        tabBarStyle: { padding: 10, height: 80, backgroundColor: "#314456" },
       })}
     >
-      <Tab.Screen name="home" component={Home} />
+      <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Search" component={Profile} />
-      <Tab.Screen name="settings" component={Settings} />
+      <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  text: { color: "#fff", fontSize: 16, fontFamily: "Poppins-Black" },
+});

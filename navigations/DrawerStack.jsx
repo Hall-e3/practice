@@ -8,6 +8,7 @@ import {
   Profile,
   Settings,
 } from "../screens";
+import BottomStack from "./BottomStack";
 const Drawer = createDrawerNavigator();
 //#E9E5DD
 export default function DrawerStack() {
@@ -42,7 +43,7 @@ export default function DrawerStack() {
       })}
       drawerContent={(props) => <CustomDrawer {...props} />}
     >
-      <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Screen name="Home" component={BottomStack} />
       <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="Messages" component={MessageScreen} />
       <Drawer.Screen name="Appointments" component={AppointmentScreen} />
