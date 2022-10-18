@@ -16,8 +16,8 @@ export default function BottomStack() {
 
           if (routeName === "home") {
             iconName = focused ? "home" : "home";
-          } else if (routeName === "profile") {
-            iconName = focused ? "user" : "user";
+          } else if (routeName === "Search") {
+            iconName = focused ? "search" : "search";
           } else if (routeName === "settings") {
             iconName = focused ? "cog" : "cog";
           }
@@ -27,11 +27,11 @@ export default function BottomStack() {
         tabBarInactiveTintColor: "gray",
         tabBarLabelStyle: { paddingBottom: 10, fontSize: 10 },
         headerShown: false,
-        tabBarStyle: { padding: 10, height: 70,backgroundColor:"#314456" },
+        tabBarStyle: { padding: 10, height: 70, backgroundColor: "#314456" },
       })}
     >
       <Tab.Screen name="home" component={Home} />
-      <Tab.Screen name="profile" component={Profile} />
+      <Tab.Screen name="Search" component={Profile} />
       <Tab.Screen name="settings" component={Settings} />
     </Tab.Navigator>
   );

@@ -7,6 +7,7 @@ export default function AppStack() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen name="drawer" component={DrawerStack} />
+      <Screen name="tabs" component={BottomStack} />
     </Navigator>
   );
 }

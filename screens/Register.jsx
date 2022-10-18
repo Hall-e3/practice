@@ -136,7 +136,7 @@ export default function Register({ navigation }) {
           >
             <Text>Already have an account? </Text>
             <TouchableOpacity onPress={() => navigation.navigate("login")}>
-              <Text style={{ marginLeft: 4, color: "blue" }}>Login</Text>
+              <Text style={{ marginLeft: 4, color: "#6495ed" }}>Login</Text>
             </TouchableOpacity>
           </View>
         </View>
