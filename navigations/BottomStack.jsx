@@ -1,9 +1,9 @@
 import React from "react";
-import { Profile, Settings, Home } from "../screens";
+import { Profile, Settings, Home, PlatForm } from "../screens";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { Feather } from "@expo/vector-icons";
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 const Tab = createBottomTabNavigator();
 //activeColor="#e91e"
 export default function BottomStack() {
@@ -32,7 +32,11 @@ export default function BottomStack() {
           fontFamily: "Poppins-Black",
         },
         headerShown: false,
-        tabBarStyle: { padding: 10, height: 80, backgroundColor: "#314456" },
+        tabBarStyle: {
+          padding: 10,
+          height: Platform.OS === "android" ? 80 : 100,
+          backgroundColor: "#314456",
+        },
       })}
     >
       <Tab.Screen name="Home" component={Home} />

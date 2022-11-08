@@ -31,7 +31,7 @@ export default function DrawerStack() {
           }
           return <FontAwesome name={iconName} size={size} color={color} />;
         },
-        headerShown: false,
+        // headerShown: false,
         drawerLabelStyle: {
           fontSize: 16,
           fontFamily: "Poppins-Black",
@@ -43,11 +43,41 @@ export default function DrawerStack() {
       })}
       drawerContent={(props) => <CustomDrawer {...props} />}
     >
-      <Drawer.Screen name="Home" component={BottomStack} />
-      <Drawer.Screen name="Profile" component={Profile} />
-      <Drawer.Screen name="Messages" component={MessageScreen} />
-      <Drawer.Screen name="Appointments" component={AppointmentScreen} />
-      <Drawer.Screen name="Settings" component={Settings} />
+      <Drawer.Screen
+        name="Home"
+        component={BottomStack}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Drawer.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Drawer.Screen
+        name="Messages"
+        component={MessageScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Drawer.Screen
+        name="Appointments"
+        component={AppointmentScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Drawer.Screen
+        name="Settings"
+        component={Settings}
+        options={{
+          headerShown: false,
+        }}
+      />
     </Drawer.Navigator>
   );
 }

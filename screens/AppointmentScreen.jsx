@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function AppointmentScreen() {
   return (
-    <View>
+    <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
       <Text>AppointmentScreen</Text>
     </View>
   )
